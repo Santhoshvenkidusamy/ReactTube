@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif; /* Replace with your chosen font */
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Apply the font to headings */
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif; /* Apply the font to paragraphs */
+  }
+  
+  /* Add more styles as needed */
+  

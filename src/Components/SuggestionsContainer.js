@@ -28,9 +28,9 @@ const SuggestionsContainer = () =>{
         <span className="font-semibold ml-4">Suggestions:</span>
         {videos.map((videos)=>{
             return (
-                <Link to={'/watch?v='+videos.id}>
+                <a href={'/watch?v='+videos.id}>
                 <SuggestionsCard key={videos.id} data={videos}/>
-                </Link>
+                </a>
             )
         })}  
         </div>

@@ -1,6 +1,6 @@
 
-const GOOGLE_API_KEY = 'AIzaSyBEtyYjuL9h5aueaIb2lVbGFQ2XY74gpbQ'
-export const SEARCH_API_KEY = '&key=AIzaSyBEtyYjuL9h5aueaIb2lVbGFQ2XY74gpbQ'
+const GOOGLE_API_KEY = 'AIzaSyDjxFu39XuwnhwWRkmhfditSoNT6VD5ULY'
+export const SEARCH_API_KEY = '&key=AIzaSyDjxFu39XuwnhwWRkmhfditSoNT6VD5ULY'
 export const YOUTUBE_API=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=100&key=${GOOGLE_API_KEY}`;
 
 export const SUGGEST_API ='http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=';
@@ -13,3 +13,13 @@ export const UseChannelAPI = async(id) =>{
     // console.log(json);
     return json;
 }
+
+export const formatViewCount = (count) => {
+    if (count >= 1000000) {
+      return `${(count / 1000000).toFixed(1)} million`;
+    } else if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k`;
+    } else {
+      return count.toString();
+    }
+  };

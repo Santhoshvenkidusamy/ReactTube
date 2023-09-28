@@ -1,16 +1,7 @@
 import { useEffect, useState } from "react";
-import { UseChannelAPI } from "../utils/constants";
+import { UseChannelAPI, formatViewCount } from "../utils/constants";
 
-const formatViewCount = (count) => {
-    if (count >= 1000000) {
-      return `${(count / 1000000).toFixed(1)} million`;
-    } else if (count >= 1000) {
-      return `${(count / 1000).toFixed(1)}k`;
-    } else {
-      return count.toString();
-    }
-  };
-  
+
 
 const VideoCard = ({ data }) => {
   const { snippet, statistics } = data;

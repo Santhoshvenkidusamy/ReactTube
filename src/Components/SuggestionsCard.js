@@ -21,7 +21,7 @@ const SuggestionsCard = ({ data }) => {
   return (
     <div className="m-2">
       <div className="flex">
-        <img className="rounded-lg" src={thumbnails.default.url} />
+        <img alt='' className="rounded-lg" src={thumbnails.default.url} />
         <div className="flex">
           <div className="ml-2">
             <div className="text-sm lg:text-xs xl:text-sm font-bold line-clamp-2">
@@ -31,6 +31,7 @@ const SuggestionsCard = ({ data }) => {
               <div className="flex-items-start">
                 <div className="h-5 w-5 m-1 rounded-full">
                   <img
+                  alt=''
                     className="h-full w-full rounded-full"
                     src={channelData?.items[0]?.snippet?.thumbnails?.default?.url}
                   />

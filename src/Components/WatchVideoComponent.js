@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
 import SuggestionsContainer from "./SuggestionsContainer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 // import { UseChannelAPI, formatViewCount } from "../utils/constants";
 
 const WatchVideoComponent = () => {
@@ -47,6 +47,7 @@ const WatchVideoComponent = () => {
         <div className="flex-items-start">
           <div className="h-9 w-9 m-1 rounded-full">
             <img
+            alt=''
               className="h-full w-full rounded-full"
               src={channelData?.items[0]?.snippet?.thumbnails?.default?.url}
             />

@@ -23,11 +23,12 @@ const VideoCard = ({ data }) => {
 
   return (
     <div className="w-72 m-2 mx-4">
-      <img className="rounded-lg" src={thumbnails.medium.url} />
+      <img alt='' className="rounded-lg" src={thumbnails.medium.url} />
       <div className="flex">
         <div className="flex-items-start">
           <div className="h-9 w-9 m-1 rounded-full">
             <img
+            alt=''
               className="h-full w-full rounded-full"
               src={channelData?.items[0]?.snippet?.thumbnails?.default?.url}
             />

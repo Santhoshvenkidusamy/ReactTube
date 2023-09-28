@@ -6,7 +6,8 @@ import ButtonContainer from "./ButtonContainer";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-const VideoContainer = () =>{
+import SuggestionsCard from "./SuggestionsCard";
+const SuggestionsContainer = () =>{
     const [videos, setVideos] = useState([]);
     const dispatch  = useDispatch();
     useEffect(()=>{
@@ -22,15 +23,13 @@ const VideoContainer = () =>{
     }
     console.log(videos);
     return(
-        <div className="mt-24">
-            <div className="ml-4">
-            <ButtonContainer />
-            </div>
-        <div className="flex flex-wrap mt-4 ml-2">
+      <div className=''>
+        <div className="mt-4 ml-2">
+        <span className="font-semibold ml-4">Suggestions:</span>
         {videos.map((videos)=>{
             return (
                 <Link to={'/watch?v='+videos.id}>
-                <VideoCard key={videos.id} data={videos}/>
+                <SuggestionsCard key={videos.id} data={videos}/>
                 </Link>
             )
         })}  
@@ -38,4 +37,4 @@ const VideoContainer = () =>{
         </div>
     )
 }
-export default VideoContainer;
+export default SuggestionsContainer;

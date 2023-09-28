@@ -7,3 +7,9 @@ export const SUGGEST_API ='http://suggestqueries.google.com/complete/search?clie
 
 export const YOUTUBE_SEARCH_API = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&type=video&q=`;
 
+export const UseChannelAPI = async(id) =>{
+    const data = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${id}&key=${GOOGLE_API_KEY}`);
+    const json = await data.json();
+    // console.log(json);
+    return json;
+}

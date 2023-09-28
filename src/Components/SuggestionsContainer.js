@@ -1,9 +1,6 @@
 
 import { useEffect, useState } from "react";
 import { YOUTUBE_API } from "../utils/constants";
-import VideoCard from '../Components/VideoCard';
-import ButtonContainer from "./ButtonContainer";
-import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import SuggestionsCard from "./SuggestionsCard";

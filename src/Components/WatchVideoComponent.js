@@ -3,32 +3,31 @@ import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
-import VideoContainer from "./VideoContainer";
 import SuggestionsContainer from "./SuggestionsContainer";
 import { useEffect, useState } from "react";
-import { UseChannelAPI, formatViewCount } from "../utils/constants";
+// import { UseChannelAPI, formatViewCount } from "../utils/constants";
 
 const WatchVideoComponent = () => {
   const dispatch = useDispatch();
   const [searchparams] = useSearchParams();
-  const channelId = searchparams.get('id');
+  // const channelId = searchparams.get('id');
   useEffect(() => {
     dispatch(closeMenu());
   }, []);
 
-  const [channelData, setChannelData] = useState(null);
+  // const [channelData, setChannelData] = useState(null);
 
-  useEffect(() => {
-    const fetchChannelData = async () => {
-      try {
-        const response = await UseChannelAPI(channelId);
-        setChannelData(response);
-      } catch (error) {
-        console.error("Error fetching channel data:", error);
-      }
-    };
-    fetchChannelData();
-  }, [channelId]);
+  // useEffect(() => {
+  //   const fetchChannelData = async () => {
+  //     try {
+  //       const response = await UseChannelAPI(channelId);
+  //       setChannelData(response);
+  //     } catch (error) {
+  //       console.error("Error fetching channel data:", error);
+  //     }
+  //   };
+  //   fetchChannelData();
+  // }, [channelId]);
 
   return (
     <div className="ml-4">

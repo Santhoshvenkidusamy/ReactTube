@@ -22,11 +22,11 @@ const VideoCard = ({ data }) => {
   }, [channelId]);
 
   return (
-    <div className="w-72 m-2 mx-4">
+    <div className='w-[260px] m-2 mx-2'>
       <img alt='' className="rounded-lg" src={thumbnails.medium.url} />
       <div className="flex">
         <div className="flex-items-start">
-          <div className="h-9 w-9 m-1 rounded-full">
+          <div className="h-7 w-7  m-1 rounded-full">
             <img
             alt=''
               className="h-full w-full rounded-full"
@@ -35,7 +35,7 @@ const VideoCard = ({ data }) => {
           </div>
         </div>
         <div className="ml-2">
-          <div className="font-semibold text-sm mt-1 line-clamp-2">{title}</div>
+          <div className="text-sm mt-1 line-clamp-2 font-medium">{title}</div>
           <div className="text-gray-600 text-sm">{channelTitle}</div>
           <div className="text-gray-500 text-sm">
             {formatViewCount(statistics.viewCount)} views

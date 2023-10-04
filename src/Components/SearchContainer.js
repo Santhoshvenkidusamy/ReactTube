@@ -13,7 +13,6 @@ const SearchContainer= () =>{
         const data = await fetch(YOUTUBE_SEARCH_API+searchparams.get('query')+SEARCH_API_KEY)
         const json = await data.json()
         setSearchResults(json);
-        console.log(json);
     }
     return(
         <div className='w-3/4 mt-28 mx-20'>

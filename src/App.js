@@ -7,6 +7,7 @@ import VideoContainer from './Components/VideoContainer';
 import WatchVideoComponent from './Components/WatchVideoComponent';
 import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import SearchContainer from './Components/SearchContainer';
+import { useState } from 'react';
 
 const appRouter = createBrowserRouter([{
  path:'/',
@@ -28,8 +29,9 @@ const appRouter = createBrowserRouter([{
 }]
 )
 const  App = () => {
+  const [category, setCategory] = useState("Home");
   return (
-    <Provider store={store} >
+    <Provider store={store} category={category} setCategory={setCategory}>
       <RouterProvider router={appRouter} />
     </Provider>
   );

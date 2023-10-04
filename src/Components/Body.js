@@ -1,17 +1,18 @@
 
 import { Outlet } from "react-router-dom";
 import SideBar from "./SideBar";
-import VideoContainer from "./VideoContainer";
 import Header from "./Header";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-const Body = ()=>{
+import { useState } from "react";
+const Body = ({category, setCategory})=>{
     const isMenuOpen = useSelector(store =>store.app.isMenuOpen);
+    console.log(category);
     return(
     <>
     <Header />
     <div className='grid grid-flow-col'>
-    {isMenuOpen &&<div className="col-span-3"><SideBar /></div>}
-    <div className={isMenuOpen?'ml-30':'ml-36'}><Outlet /></div>
+    {isMenuOpen &&<div className="col-span-3"><SideBar category={category} setCategory={setCategory}/></div>}
+    <div className={isMenuOpen?'ml-30':'ml-36'}><Outlet category={category} setCategory={setCategory}/></div>
     </div>
     </>
     )

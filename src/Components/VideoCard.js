@@ -23,7 +23,7 @@ const VideoCard = ({ data }) => {
 
   return (
     <div className='w-[260px] m-2 mx-2'>
-      <img alt='' className="rounded-lg" src={thumbnails.medium.url} />
+      <img alt='' className="rounded-lg" src={thumbnails?.medium?.url} />
       <div className="flex">
         <div className="flex-items-start">
           <div className="h-7 w-7  m-1 rounded-full">
@@ -38,7 +38,7 @@ const VideoCard = ({ data }) => {
           <div className="text-sm mt-1 line-clamp-2 font-medium">{title}</div>
           <div className="text-gray-600 text-sm">{channelTitle}</div>
           <div className="text-gray-500 text-sm">
-            {formatViewCount(statistics.viewCount)} views
+            {formatViewCount(Number(statistics?.viewCount))} views
           </div>
         </div>
       </div>

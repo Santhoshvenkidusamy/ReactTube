@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import hamburg from '../Components/Images/hamburg.jpg';
 import youtube from '../Components/Images/youtube.jpg';
 import github from '../Components/Images/github.png';
+import { addCategory } from '../utils/categorySlice';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -61,7 +62,7 @@ const Header = () => {
           className='h-8 mt-3 cursor-pointer'
         />
         <Link to=''>
-          <img src={youtube} alt='icon' className='h-14' />
+          <img src={youtube} alt='icon' className='h-14' onClick={()=>dispatch(addCategory('Home'))}/>
         </Link>
       </div>
       <div className='col-span-10 ml-12 flex justify-center'>

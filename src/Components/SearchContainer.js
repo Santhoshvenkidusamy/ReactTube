@@ -18,7 +18,7 @@ const SearchContainer= () =>{
         <div className='w-3/4 mt-28 mx-20'>
         {searchResults?.items?.map((videos)=>{
             return (
-                <Link to={'/watch?v='+videos?.id?.videoId}>
+                <Link to={`/watch?v=${videos?.id?.videoId}&id=${videos?.snippet?.channelId}`}>
                 <SearchCard key={videos.id} data={videos}/>
                 </Link>
             )

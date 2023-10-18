@@ -24,14 +24,14 @@ const WatchVideoComponent = () => {
       console.log(res.items[0]);
       setVideo(res);
     });
-  },[])
+  },[channelId])
 
   useEffect(() => {
     fetchDataFromApi(`channels?part=snippet%2Cstatistics&id=${channelId}`).then((res) => {
       console.log(res);
       setChannelData(res);
     });
-  },[])
+  },[channelId])
 
   return (
     <div className="ml-4">

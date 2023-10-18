@@ -1,11 +1,13 @@
 
 import { useEffect, useState } from "react";
 import { YOUTUBE_API } from "../utils/constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom"
 import { toggleMenu } from "../utils/appSlice";
 import SuggestionsCard from "./SuggestionsCard";
 const SuggestionsContainer = () =>{
     const [videos, setVideos] = useState([]);
+    const category = useSelector(store =>store.category.category)
     const dispatch  = useDispatch();
     useEffect(()=>{
         getYoutubeData();
@@ -25,9 +27,9 @@ const SuggestionsContainer = () =>{
         <span className="font-semibold ml-4">Suggestions:</span>
         {videos.map((videos)=>{
             return (
-                <a href={'/watch?v='+videos.id}>
+                <Link to={`/watch?v=${category === 'Home'? videos?.id: videos?.id?.videoId}&id=${videos?.snippet?.channelId}`}>
                 <SuggestionsCard key={videos.id} data={videos}/>
-                </a>
+                </Link>
             )
         })}  
         </div>

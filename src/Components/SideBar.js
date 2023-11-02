@@ -56,7 +56,7 @@ const LeftNav = () => {
 					);
 				})}
 				<hr className="my-5 border-black/[0.2]" />
-				<div className="text-black/[0.5] text-[12px]">Clone by: Namaste React</div>
+				<div className="text-black/[0.5] text-[12px]">Clone by: Santhosh </div>
 			</div>
 		</div>
 	);
